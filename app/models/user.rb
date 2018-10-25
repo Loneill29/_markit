@@ -4,5 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :bookmarks, dependent: :destroy
   has_many :topics, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  def liked(bookmark)
+    if bookmark
+      likes.where(bookmark_id: bookmark.id).first
+    end
+  end
 end
