@@ -9,7 +9,7 @@
           <% @topic.bookmarks.each do |bookmark| %>
           <ul>
             <li class="well-sm">
-              <%= bookmark.url %>
+              <%= link_to bookmark.url, topic_bookmark_path(@topic, bookmark) %>
             </li>
           </ul>
         </div>
