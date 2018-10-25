@@ -8,12 +8,14 @@
           <h4 class="media-heading">
              <%= link_to topic.title, topic %>
           </h4>
-              <% topic.bookmarks.each do |bookmark| %>
-              <ul>
-                <li class="well-sm">
-                  <%= bookmark.url %>
-                </li>
-              </ul>
+          <% topic.bookmarks.each do |bookmark| %>
+            <div class="col-sm-4">
+              <div class="well">
+                <%= image_tag bookmark.thumbnail, size: '100' %>
+                <p><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </p>
+                <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+              </div>
+            </div>
         </div>
         <% end %>
       </div>

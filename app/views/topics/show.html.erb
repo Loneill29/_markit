@@ -7,10 +7,13 @@
     <div class="col-md-8">
       <% @topic.bookmarks.each do |bookmark| %>
         <div class="media">
-          <div class="media-body">
-            <p><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </p>
+          <div class="col-sm-4">
+            <div class="well">
+              <%= image_tag bookmark.thumbnail, size: '100' %>
+              <p><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </p>
+              <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+            </div>
           </div>
-          <%= render partial: 'likes/like', locals: { topic: @topic, bookmark: bookmark } %>
         </div>
       <% end %>
     </div>

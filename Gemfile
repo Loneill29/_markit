@@ -43,6 +43,8 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'embedly'
+
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 group :development do
