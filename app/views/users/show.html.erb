@@ -1,0 +1,24 @@
+<h1 class="page-title">My Profile</h1>
+<div class="row" id="bookmarks">
+  <h2>My Bookmarks</h2>
+    <div class="col-md-8">
+        <% @user_bookmarks.each do |bookmark| %>
+          <ul>
+            <h3><%="#{bookmark.topic.title}"%></h3>
+            <li><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </li>
+          </ul>
+        <% end %>
+    </div>
+</div>
+<div class="row" id="bookmarks">
+  <h2>Liked Bookmarks</h2>
+    <div class="col-md-8">
+      <% @liked_bookmarks.each do |bookmark| %>
+        <ul>
+          <h3><%="#{bookmark.topic.title}"%></h3>
+            <li><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </li>
+          <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+        </ul>
+      <% end %>
+    </div>
+</div>

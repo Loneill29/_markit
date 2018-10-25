@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :topics, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :liked_bookmarks, through: :likes, source: :bookmark 
 
   def liked(bookmark)
     if bookmark

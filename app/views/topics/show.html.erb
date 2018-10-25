@@ -8,9 +8,7 @@
       <% @topic.bookmarks.each do |bookmark| %>
         <div class="media">
           <div class="media-body">
-            <h4 class="media-heading">
-              <%= link_to bookmark.url, topic_bookmark_path(@topic, bookmark) %>
-            </h4>
+            <p><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </p>
           </div>
           <%= render partial: 'likes/like', locals: { topic: @topic, bookmark: bookmark } %>
         </div>

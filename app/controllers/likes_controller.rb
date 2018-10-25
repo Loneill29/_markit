@@ -33,7 +33,7 @@ class LikesController < ApplicationController
     if like.destroy
       flash[:notice] = "Bookmark was unliked."
     else
-      flash.now[:alert] = "There was an error un-liking that bookmark. Please try again."
+      flash[:alert] = "There was an error un-liking that bookmark. Please try again."
     end
     redirect_to @bookmark.topic
   end
