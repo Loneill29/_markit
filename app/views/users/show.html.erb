@@ -1,29 +1,34 @@
 <h1 class="page-title">My Profile</h1>
 <div class="row" id="bookmarks">
   <h2>My Bookmarks</h2>
-    <div class="col-md-8">
-        <% @user_bookmarks.each do |bookmark| %>
-          <ul>
-            <h3><%="#{bookmark.topic.title}"%></h3>
-            <li><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </li>
-          </ul>
-        <% end %>
+    <div class="col-md-8 card">
+      <% @user_bookmarks.each do |bookmark| %>
+        <ul>
+          <li class="well">
+            <div>
+              <h4><%="#{bookmark.topic.title}"%></h4>
+              <%= image_tag bookmark.thumbnail, size: '100', class: 'preview' %>
+              <%= link_to bookmark.url, bookmark.url,  target: '_blank' %>
+            </div>
+          </li>
+        </ul>
+      <% end %>
     </div>
 </div>
 <div class="row" id="bookmarks">
   <h2>Liked Bookmarks</h2>
-    <div class="col-md-8">
-      <% @liked_bookmarks.each do |bookmark| %>
-        <ul>
-          <h3><%="#{bookmark.topic.title}"%></h3>
-          <div class="col-sm-4">
-            <div class="well">
-              <%= image_tag bookmark.thumbnail, size: '100' %>
-              <li><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </li>
-              <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
-            </div>
+  <div class="col-md-8 card">
+    <% @liked_bookmarks.each do |bookmark| %>
+      <ul>
+        <li class="well">
+          <div>
+            <h4><%="#{bookmark.topic.title}"%></h4>
+            <%= image_tag bookmark.thumbnail, size: '100', class: 'preview' %>
+            <%= link_to bookmark.url, bookmark.url,  target: '_blank' %>
+            <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
           </div>
-        </ul>
-      <% end %>
-    </div>
+        </li>
+      </ul>
+    <% end %>
+  </div>
 </div>
