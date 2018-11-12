@@ -21,6 +21,14 @@ ul {
   list-style: none;
 }
 
+body {
+  background: #73F7F7;
+}
+
+a {
+  color: #096B72;
+}
+
 .pull-right {
   margin-right: 10px;
 }
@@ -32,6 +40,7 @@ ul {
 
 .card {
   text-align: center;
+  width: 100%;
 }
 
 .preview {
