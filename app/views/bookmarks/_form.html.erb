@@ -4,8 +4,11 @@
       <div class="form-group">
         <%= f.text_field :url, class: 'form-control', placeholder: "Enter bookmark URL" %>
       </div>
+      <p class="notes">
+        * Bookmark URL must start with ' https:// ' *
+      </p>
       <div class="form-group">
-        <%= f.submit "Save", class: 'btn btn-success' %>
+        <%= f.submit "Save", class: 'btn btn-default' %>
       </div>
     <% end %>
   </div>

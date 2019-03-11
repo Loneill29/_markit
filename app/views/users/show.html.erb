@@ -1,34 +1,41 @@
-<h1 class="page-title">My Profile</h1>
-<div class="row" id="bookmarks">
-  <h2>My Bookmarks</h2>
-    <div class="col-md-8 card">
-      <% @user_bookmarks.each do |bookmark| %>
-        <ul>
-          <li class="well">
-            <div>
-              <h4><%="#{bookmark.topic.title}"%></h4>
-              <%= image_tag bookmark.thumbnail, size: '100', class: 'preview' %>
-              <%= link_to bookmark.url, bookmark.url,  target: '_blank' %>
+<div class="container topics-index">
+  <h1 class="page-title">My Profile</h1>
+
+  <div class="full-width my-bookmarks">
+    <h2 class="topic-title red">My Bookmarks</h2>
+    <% @user_bookmarks.each do |bookmark| %>
+      <div class="col-md-4 image-cards">
+        <div class="card">
+          <div class="card-block">
+            <div class="card-img">
+              <%= link_to (image_tag bookmark.thumbnail, size: '100', class: 'preview'), bookmark.url, target: '_blank' %>
             </div>
-          </li>
-        </ul>
-      <% end %>
-    </div>
-</div>
-<div class="row" id="bookmarks">
-  <h2>Liked Bookmarks</h2>
-  <div class="col-md-8 card">
-    <% @liked_bookmarks.each do |bookmark| %>
-      <ul>
-        <li class="well">
-          <div>
-            <h4><%="#{bookmark.topic.title}"%></h4>
-            <%= image_tag bookmark.thumbnail, size: '100', class: 'preview' %>
-            <%= link_to bookmark.url, bookmark.url,  target: '_blank' %>
-            <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+            <div class="buttons center">
+              <%= link_to bookmark, method: :delete, class: 'btn btn-delete', data: { confirm: 'Are you sure you want to delete this bookmark?' }  do %>
+                <i class="far fa-trash-alt trashcan"></i>
+              <% end %>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     <% end %>
   </div>
-</div>
+
+  <h2 class="topic-title liked-bookmarks red">Liked Bookmarks</h2>
+  <div class="full-width">
+      <% @liked_bookmarks.each do |bookmark| %>
+        <div class="col-md-4 image-cards">
+          <div class="card">
+            <div class="card-block">
+              <div class="card img">
+                <%= link_to (image_tag bookmark.thumbnail, size: '100', class: 'preview'), bookmark.url, target: '_blank' %>
+              </div>
+              <p class="card-text"
+                <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+              </p>
+            </div>
+          </div>
+        </div>
+    <% end %>
+    </div>
+  </div>

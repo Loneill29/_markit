@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Roboto|Sofia' %>
+    <%= stylesheet_link_tag 'application', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css' %>
   </head>
 
   <body>
@@ -19,23 +21,20 @@
         <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
   </div>
+  <ul class="nav nav-tabs">
+    <li class="markit-nav"><%= link_to "Markit", root_path %></li>
+    <li><%= link_to "Topics", topics_path %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "My Bookmarks", user_path(current_user) %></li>
+    <% end %>
+  </ul>
   <div class="container">
-    <ul class="nav nav-tabs">
-      <li><%= link_to "MarkIt!", root_path %></li>
-      <li><%= link_to "Topics", topics_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to "My Bookmarks", user_path(current_user) %></li>
-      <% end %>
-    </ul>
-
     <% if flash[:notice] %>
       <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:notice] %>
       </div>
     <% elsif flash[:alert] %>
       <div class="alert alert-warning">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:alert] %>
       </div>
     <% end %>

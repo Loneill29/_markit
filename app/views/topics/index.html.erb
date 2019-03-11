@@ -1,25 +1,28 @@
-<h1 class="page-title"> Topics <%= link_to "New Topic", new_topic_path, class: 'btn btn-success' %> </h1>
+<div class="container topics-index">
 
-  <div class="row">
-      <div class="media">
-        <div class="media-body">
-          <% @topics.each do |topic| %>
-          <div class="col-md-12">
-          <h3 class="media-heading topic-title">
-             <%= link_to topic.title, topic %>
-          </h3>
-          <% topic.bookmarks.each do |bookmark| %>
-            <div class="col-sm-8 card">
-              <div class="well">
-                <%= image_tag bookmark.thumbnail, size: '100', class: 'preview' %>
-                <p><%= link_to bookmark.url, bookmark.url,  target: '_blank' %> </p>
-                <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
-              </div>
-            </div>
+  <h1 class="page-title"> Topics <%= link_to "New Topic", new_topic_path, class: 'btn btn-default' %> </h1>
+  <br>
 
-        <% end %>
+  <% @topics.each do |topic| %>
+  <div class="full-width">
+    <h2 class="topic-title red">
+      <%= link_to topic.title, topic %>
+    </h2>
+
+    <% topic.bookmarks.each do |bookmark| %>
+    <div class="col-md-4 image-cards">
+      <div class="card">
+        <div class="card-block">
+          <div class="card-img">
+            <%= link_to (image_tag bookmark.thumbnail, size: '100', class: 'preview'), bookmark.url, target:'_blank' %>
           </div>
-      </div>
-      </div>
+          <p class="card-text">
+            <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+          </p>
         </div>
-      <% end %>
+      </div>
+    </div>
+    <% end %>
+    </div>
+  <% end %>
+</div>

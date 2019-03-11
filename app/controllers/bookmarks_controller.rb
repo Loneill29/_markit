@@ -1,7 +1,8 @@
 class BookmarksController < ApplicationController
   before_action :authenticate_user!
-  before_action :authorize_user, except: [:show, :new, :create]
+  before_action :authorize_user, except: [:show, :new, :create, :edit]
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   def show
     @bookmark = Bookmark.find(params[:id])
   end
