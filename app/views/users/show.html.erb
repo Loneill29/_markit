@@ -3,6 +3,9 @@
 
   <div class="full-width my-bookmarks">
     <h2 class="topic-title red">My Bookmarks</h2>
+    <% if !@user_bookmarks.any? %>
+      <p class="notes"> You haven't added any bookmarks yet. </p>
+    <% end %>
     <% @user_bookmarks.each do |bookmark| %>
       <div class="col-md-4 image-cards">
         <div class="card">
@@ -23,19 +26,22 @@
 
   <h2 class="topic-title liked-bookmarks red">Liked Bookmarks</h2>
   <div class="full-width">
-      <% @liked_bookmarks.each do |bookmark| %>
-        <div class="col-md-4 image-cards">
-          <div class="card">
-            <div class="card-block">
-              <div class="card img">
-                <%= link_to (image_tag bookmark.thumbnail, size: '100', class: 'preview'), bookmark.url, target: '_blank' %>
-              </div>
-              <p class="card-text"
-                <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
-              </p>
+    <% if !@liked_bookmarks.any? %>
+      <p class="notes"> You haven't liked any bookmarks yet. </p>
+    <% end %>
+    <% @liked_bookmarks.each do |bookmark| %>
+      <div class="col-md-4 image-cards">
+        <div class="card">
+          <div class="card-block">
+            <div class="card img">
+              <%= link_to (image_tag bookmark.thumbnail, size: '100', class: 'preview'), bookmark.url, target: '_blank' %>
             </div>
+            <p class="card-text"
+              <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+            </p>
           </div>
         </div>
+      </div>
     <% end %>
-    </div>
   </div>
+</div>
