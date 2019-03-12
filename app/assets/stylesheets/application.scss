@@ -59,15 +59,25 @@ a {
 
 .page-title {
   text-align: center;
+  color: #ffff;
 }
 
 .topics-index {
-  width: 90%;
+  margin-left: auto!important;
+  margin-right: auto!important;
 }
 
 .topic-title {
   margin-top: 50px;
   left: 0;
+  background-color: #e60023;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+.topic-title a {
+  color: #ffff;
 }
 
 .col-md-10 {
@@ -80,24 +90,30 @@ a {
   padding-top: 30px;
   padding-bottom: 10px;
   width: 250px;
-  height: 208px;
+  height: 250px;
   margin-left: 20px;
-  margin-right: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
 }
 
+.img-row {
+  margin-left: 20px;
+}
+
 .full-width {
   float: left;
-  margin-left: 5%;
-  margin-right: 5%;
   width: 100%;
+  text-align: center;
 }
 
 .markit {
   color: #e60023!important;
   font-family: 'Sofia', cursive;
+}
+
+.new-topic {
+  margin-left: 10px;
 }
 
 .markit-nav a {
@@ -108,18 +124,24 @@ a {
 }
 
 .liked-bookmarks {
-  margin-left: 5%;
+  text-align: center;
 }
 
 .my-bookmarks {
   margin-bottom: 40px;
 }
 
-.red a {
+.red {
   color: #e60023!important;
+  padding-bottom: 20px;
 }
+
 .nav-tabs li a {
   margin-top: 10px;
+}
+
+.nav-tabs li a:hover, .pull-right a:hover {
+  color: #e60023!important;
 }
 
 .jumbotron {
@@ -192,7 +214,7 @@ a {
 }
 
 .btn-delete {
-  color: #e60023;
+  color: #e60023!important;
   background-color: #ffff;
   border: 2px solid #e60023;
 }
@@ -244,21 +266,44 @@ a {
   }
 }
 
-@media (max-width: 736px) {
-  .full-width {
-    margin-left: 5%;
-    margin-right: 5%;
+@media (max-width: 455px) {
+  .img-row {
+    margin-left: 10%;
   }
+}
+
+@media (min-width: 454px) and (max-width: 550px) {
+  .img-row {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 630px) {
+  .img-row {
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 631px) and (max-width: 767px) {
+  .img-row {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 736px) {
   .home-cards {
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-@media (max-width: 991px) {
-  .full-width {
-    margin-left: 25%;
-    margin-right: 25%;
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-row {
+    margin-left: 30%;
   }
+}
+
+@media (max-width: 991px) {
   .home-cards {
     margin-left: 25%;
     margin-right: 25%;
@@ -266,12 +311,14 @@ a {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .full-width {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
   .home-cards {
     margin-left: 15%;
     margin-right: 15%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .img-row {
+    margin-left: 50px;
   }
 }
