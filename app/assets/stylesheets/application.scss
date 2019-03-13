@@ -22,8 +22,12 @@ ul {
 }
 
 body {
-  background: #ffff;
   font-family: 'Roboto', sans-serif!important;
+}
+
+.home_page {
+  background: url('markit_background.jpg') top no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -52,14 +56,25 @@ a {
   padding-top: 10px!important;
 }
 
-
 .preview {
   padding-bottom: 5px;
 }
 
-.page-title {
-  text-align: center;
-  color: #ffff;
+.page-title, .full-width .page-title a {
+  color: #333333;
+  text-align: left;
+}
+
+.title-show {
+  margin-left: 40px;
+}
+
+.full-width .page-title a {
+  margin-left: 40px;
+}
+
+.full-width .page-title {
+  padding-top: 30px;
 }
 
 .topics-index {
@@ -85,9 +100,7 @@ a {
 }
 
 .image-cards {
-  border: 1px solid #dedbdb;
   border-radius: 2px;
-  padding-top: 30px;
   padding-bottom: 10px;
   width: 250px;
   height: 250px;
@@ -97,12 +110,12 @@ a {
   text-align: center;
 }
 
-.img-row {
-  margin-left: 20px;
+.card-block {
+  width: 251px;
+  border: 1px solid #dedbdb;
 }
 
 .full-width {
-  float: left;
   width: 100%;
   text-align: center;
 }
@@ -145,13 +158,20 @@ a {
 }
 
 .jumbotron {
-  background-color: #efefef!important;
+  background-color: rgba(255,255,255,1)!important;
+  text-align: center;
+  box-shadow: 1px 1px 5px #dedbdb;
 }
 
 .home-cards {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.img-home {
+  background-color: rgba(255,255,255,1)!important;
+  box-shadow: 1px 1px 5px #dedbdb;
 }
 
 .homepage {
@@ -173,6 +193,7 @@ a {
 
 .landing {
   width: 100%!important;
+  height: 100%!important;
 }
 
 .add-bookmark {
@@ -199,14 +220,24 @@ a {
   color: #ffff;
 }
 
-.buttons a {
+.btns a {
+  display: inline;
   float: left;
-  margin-left: 10px;
+  margin: 5px;
 }
 
-.buttons {
-  margin-left: 40px;
-  padding-top: 15px;
+.btns {
+  padding-bottom: 50px;
+  padding-top: 10px;
+  margin-left: 50px;
+}
+
+.user-show {
+  margin-left: 100px!important;
+}
+
+.user-like {
+  margin-left: 75px;
 }
 
 .center {

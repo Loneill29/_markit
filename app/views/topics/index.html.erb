@@ -1,9 +1,9 @@
 <div class="topics-index">
-  <h1 class="page-title red"> Topics <%= link_to "New Topic", new_topic_path, class: 'btn btn-default new-topic' %> </h1>
+  <h1 class="page-title"> Topics <%= link_to "New Topic", new_topic_path, class: 'btn btn-default new-topic' %> </h1>
   <br>
   <% @topics.each do |topic| %>
   <div class="full-width">
-    <h2 class="topic-title">
+    <h2 class="page-title">
       <%= link_to topic.title, topic %>
     </h2>
     <div class="img-row">
@@ -12,7 +12,7 @@
       <div class="card">
         <div class="card-block">
           <div class="card-img">
-            <%= link_to (image_tag bookmark.thumbnail, width: '200', class: 'preview'), bookmark.url, target:'_blank' %>
+            <%= link_to (image_tag bookmark.thumbnail, width: '250', class: 'preview'), bookmark.url, target:'_blank' %>
           </div>
           <p class="card-text">
             <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>

@@ -12,9 +12,9 @@
         <div class="card">
           <div class="card-block">
             <div class="card-img">
-              <%= link_to (image_tag bookmark.thumbnail, width: '200', class: 'preview'), bookmark.url, target: '_blank' %>
+              <%= link_to (image_tag bookmark.thumbnail, width: '250', class: 'preview'), bookmark.url, target: '_blank' %>
             </div>
-            <div class="buttons center">
+            <div class="btns user-show">
               <%= link_to bookmark, method: :delete, class: 'btn btn-delete', data: { confirm: 'Are you sure you want to delete this bookmark?' }  do %>
                 <i class="far fa-trash-alt trashcan"></i>
               <% end %>
@@ -37,9 +37,9 @@
         <div class="card">
           <div class="card-block">
             <div class="card img">
-              <%= link_to (image_tag bookmark.thumbnail, width: '200', class: 'preview'), bookmark.url, target: '_blank' %>
+              <%= link_to (image_tag bookmark.thumbnail, width: '250', class: 'preview'), bookmark.url, target: '_blank' %>
             </div>
-            <p class="card-text"
+            <p class="btns user-like"
               <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
             </p>
           </div>
