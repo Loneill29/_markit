@@ -25,11 +25,6 @@ body {
   font-family: 'Roboto', sans-serif!important;
 }
 
-.home_page {
-  background: url('markit_background.jpg') top no-repeat;
-  background-size: cover;
-}
-
 a {
   color: #096B72;
   font-family: 'Roboto', sans-serif!important;
@@ -66,7 +61,8 @@ a {
 }
 
 .title-show {
-  margin-left: 40px;
+  text-align: center;
+
 }
 
 .full-width .page-title a {
@@ -100,7 +96,6 @@ a {
 }
 
 .image-cards {
-  border-radius: 2px;
   padding-bottom: 10px;
   width: 250px;
   height: 250px;
@@ -121,7 +116,9 @@ a {
 }
 
 .markit {
-  color: #e60023!important;
+  color: #ffff;
+  font-size: 100px;
+  margin: auto;
   font-family: 'Sofia', cursive;
 }
 
@@ -157,21 +154,25 @@ a {
   color: #e60023!important;
 }
 
-.jumbotron {
-  background-color: rgba(255,255,255,1)!important;
+.markit-circle {
+  background-color: #e60023;
   text-align: center;
-  box-shadow: 1px 1px 5px #dedbdb;
+  margin-bottom: 50px;
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
 }
 
-.home-cards {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+.fa-5x {
+  margin-top: 40px;
 }
 
 .img-home {
   background-color: rgba(255,255,255,1)!important;
-  box-shadow: 1px 1px 5px #dedbdb;
+
 }
 
 .homepage {
@@ -199,6 +200,16 @@ a {
 .add-bookmark {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.home-cards {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.home-cards .image-cards {
+  margin-left: 0!important;
 }
 
 .home-cards i {
@@ -260,13 +271,6 @@ a {
   margin-left: 5px;
 }
 
-@media (max-width: 700px) {
-  .home-cards {
-    margin-left: 5%!important;
-    margin-right: 5%!important
-  }
-}
-
 @media (max-width: 421px) {
   .markit-nav a {
     margin-right: 0px!important;
@@ -295,6 +299,10 @@ a {
   .markit {
     font-size: 63px!important;
   }
+  .markit-circle {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 455px) {
@@ -321,13 +329,6 @@ a {
   }
 }
 
-@media (max-width: 736px) {
-  .home-cards {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
   .img-row {
     margin-left: 30%;
@@ -335,9 +336,12 @@ a {
 }
 
 @media (max-width: 991px) {
-  .home-cards {
-    margin-left: 25%;
-    margin-right: 25%;
+  .home-cards .image-cards {
+    margin: auto!important;
+    padding-top: 60px;
+  }
+  .fa-5x {
+    padding-top: 0px!important;
   }
 }
 
@@ -351,5 +355,13 @@ a {
 @media (min-width: 992px) and (max-width: 1199px) {
   .img-row {
     margin-left: 50px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-cards {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }

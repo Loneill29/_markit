@@ -12,7 +12,7 @@ class Bookmark < ApplicationRecord
   end
 
   def default_thumbnail
-    "http://365psd.com/images/premium/thumbs/233/vector-bookmark-icon-with-check-mark-glyph-1204364.jpg"
+    "https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
   end
 
   def self.embedly
