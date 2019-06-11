@@ -2,7 +2,7 @@
   <h1 class="page-title">My Profile</h1>
 
   <div class="full-width my-bookmarks">
-    <h2 class="red">My Bookmarks</h2>
+    <h2>My Bookmarks</h2>
     <% if !@user_bookmarks.any? %>
       <p class="notes"> You haven't added any bookmarks yet. </p>
     <% end %>
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <h2 class="red liked-bookmarks">Liked Bookmarks</h2>
+  <h2 class="liked-bookmarks">Liked Bookmarks</h2>
   <div class="full-width">
     <% if !@liked_bookmarks.any? %>
       <p class="notes"> You haven't liked any bookmarks yet. </p>

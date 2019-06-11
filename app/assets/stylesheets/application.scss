@@ -137,12 +137,16 @@ a {
   text-align: center;
 }
 
+.like {
+  background-color: #e60023d9!important;
+}
+
 .my-bookmarks {
   margin-bottom: 40px;
 }
 
 .red {
-  color: #e60023!important;
+  color: #e6002399!important;
   padding-bottom: 20px;
 }
 
@@ -151,11 +155,11 @@ a {
 }
 
 .nav-tabs li a:hover, .pull-right a:hover {
-  color: #e60023!important;
+  color: #e6002399!important;
 }
 
 .markit-circle {
-  background-color: #e60023;
+  background-color: #e6002399;
   text-align: center;
   margin-bottom: 50px;
   display: flex;
@@ -215,14 +219,14 @@ a {
 .home-cards i {
   padding-top: 10px;
   padding-bottom: 25px;
-  color: #e60023;
+  color: #e60023d9;
 }
 
 .btn-default {
-  background-color: #e60023;
+  background-color: #e6002399;
   border: 2px solid #ffff;
   color: #ffff;
-  box-shadow: 0 0 0 1px #e60023;
+  box-shadow: 0 0 0 1px #e6002399;
 }
 
 .btn-default:hover {
@@ -256,9 +260,9 @@ a {
 }
 
 .btn-delete {
-  color: #e60023!important;
+  color: #9e9d9d!important;
   background-color: #ffff;
-  border: 2px solid #e60023;
+  border: 2px solid #c7c7c7;
 }
 
 .btn-delete:hover {
