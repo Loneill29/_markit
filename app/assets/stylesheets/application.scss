@@ -26,13 +26,12 @@ body {
 }
 
 a {
-  color: #096B72;
+  color: #e60023d9;
   font-family: 'Roboto', sans-serif!important;
 }
 
-.pull-right {
-  margin-right: 50px;
-  margin-top: 20px!important;
+a:hover {
+  color: #e60023d9;
 }
 
 .nav {
@@ -51,6 +50,10 @@ a {
   padding-top: 10px!important;
 }
 
+.nav .nav-tabs {
+  padding-bottom: 0!important;
+  border: 0!important;
+}
 .preview {
   padding-bottom: 5px;
 }
@@ -137,8 +140,12 @@ a {
   text-align: center;
 }
 
-.like {
+.bold {
   background-color: #e60023d9!important;
+}
+
+.bold:hover {
+  background-color: #a2283bd9!important;
 }
 
 .my-bookmarks {
@@ -208,8 +215,8 @@ a {
 
 .home-cards {
   width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 17%;
+  margin-right: 13%;
 }
 
 .home-cards .image-cards {
@@ -268,7 +275,7 @@ a {
 .btn-delete:hover {
   color: #a5051d;
   background-color: #ddd;
-  border: 2px solid #a5051d;
+  border: 2px solid #c7c7c7!important;
 }
 
 .edit-delete {
@@ -368,4 +375,23 @@ a {
     margin-left: 10%;
     margin-right: 10%;
   }
+}
+
+/* Devise */
+.email, .password, .remember-me {
+  margin-top: 10px;
+}
+
+.btn input {
+  background-color: transparent;
+  border: 0px;
+}
+
+.login {
+  margin-top: 10px;
+  background-color: #e60023d9;
+}
+
+.cancel {
+  margin-top: 10px;
 }
